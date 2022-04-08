@@ -22,7 +22,9 @@ export class CartService {
     return this.items;
   }
 
-  getShippingPrices(){
-    return this.http.get<(type: string, price: number)[]>('/assserts/shipping.json')
+  getShippingPrices() {
+    return this.http.get<{ type: string; price: number }[]>(
+      '/asssets/shipping.json'
+    );
   }
 }
